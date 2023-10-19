@@ -25,10 +25,11 @@ let fetchUsers = async () => {
 
 </script>
 </head>
-<body>
 
+<body>
+<h1> hi </h1>
    <form id = "newUser">
-      <input id = "user" autocomplete = "off" autofocus placeholder = "add a new task here" type = "text">
+      <input id = "user" autocomplete = "off" autofocus placeholder = "add a user" type = "text">
       <input id = "submit" type = "submit">
     </form>
 
