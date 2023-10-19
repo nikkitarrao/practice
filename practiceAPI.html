@@ -10,6 +10,7 @@ let fetchUsers = async () => {
   const response_json = await response.json();
   const results_arr = response_json.results;
   return results_arr.map(transform_results);
+    
   }
   catch(err){
   console.error(err);
