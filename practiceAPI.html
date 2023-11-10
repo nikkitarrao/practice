@@ -8,7 +8,10 @@
   <div id = "display-data" > </div>
 
 </body>
-    
+
+  <script id = "view">
+  </script>
+    <p> Hi there: </p>
  <script>
   
 
@@ -23,7 +26,7 @@ async function backEndRestAPI(quizId,qid){
 
   //Rendering View and Update DOM
   const renderView = (x) => {
-      var source = document.getElementById(x);
+      var source = document.getElementById('#view').innerHTML;
       var template = Handlebars.compile(source);
       var model = {
         "firstName" : "Nikkita"
