@@ -22,11 +22,14 @@ async function backEndRestAPI(quizId,qid){
     };
 
   //Rendering View and Update DOM
-  const renderView = (model, view) => {
+  const renderView = (view) => {
       var source = document.querySelector(view).innerHTML;
       var template = Handlebars.compile(source);
-      var html = template(model);
-      return html;
+      var model = {
+        firstName = 'Nikkita'
+      }
+      var html = template(model)
+      return html
   };
 
     document.addEventListener('DOMContentLoaded', function() {
