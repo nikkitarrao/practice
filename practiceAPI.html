@@ -19,7 +19,7 @@ async function backEndRestAPI(quizId,qid){
   const data = await response.json()
   const html_element = renderView(data, view)
   document.querySelector('#display-data').innerHTML = html_element;
-    }
+    };
 
   //Rendering View and Update DOM
   const renderView = (model, view) => {
@@ -27,6 +27,7 @@ async function backEndRestAPI(quizId,qid){
       var template = Handlebars.compile(source);
       var html = template(model);
       return html;
+  };
 
     document.addEventListener('DOMContentLoaded', function() {
         view1 = renderView({},'#initialScreen');
