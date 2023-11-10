@@ -26,7 +26,7 @@ async function backEndRestAPI(quizId,qid){
       var source = document.querySelector(view).innerHTML;
       var template = Handlebars.compile(source);
       var model = {
-        firstName = 'Nikkita'
+        "firstName" : "Nikkita"
       }
       var html = template(model)
       return html
