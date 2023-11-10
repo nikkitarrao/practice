@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<script>
-
-let fetchUsers = async () => {
-  try{
-  const response = await fetch('https://randomuser.me/api/?results=1');
-  const response_json = await response.json();
-  const results_arr = response_json.results;
-  return results_arr.map(transform_results);
     
-  }
-  catch(err){
-  console.error(err);
-  }
+<script>
+  
 
-  document.querySelector("form").onsubmit = () => {
-    let newUser = document.querySelector("#newUser").value;
-  }
+//Asynchronous Network Request
+async function backEndRestAPI(quizId,qid){
+  let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizId}/${qid}`
+  const response = await fetch('https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/questions')
+  const data = await response.json()
+  const html_element = renderView(data, view)
+  document.querySelector('#display-data').innerHTML = html_element;
+    }
 
+  //Rendering View and Update DOM
+  const renderView = (model, view) => {
+      var source = document.querySelector(view).innerHTML;
+      var template = Handlebars.compile(source);
+      var html = template(model);
+      return html;
 
-}
+    document.addEventListener('DOMContentLoaded', function() {
+        view1 = renderView({},'#initialScreen');
+        document.querySelector('#display-data').innerHTML = view1;
+  
+    });
 
 
 </script>
+
+
 </head>
 
 <body>
 <h1> practicing asynchronous network requests </h1>
+  <div id = "display-data" > </div>
    <form id = "newUser">
       <input id = "user" autocomplete = "off" autofocus placeholder = "add a user" type = "text">
       <input id = "submit" type = "submit">
