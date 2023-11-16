@@ -15,16 +15,9 @@
 
 </body>
 <div>
-    <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
+  <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
     <form>
-    <div> 
-        <select name="choicesMultipleChoice" id="choicesMultipleChoice">
-            <option value="A"> A. {{choices[0]}} </option>
-            <option value="B"> B. {{choices[1]}} </option>
-            <option value="C"> C. {{choices[2]}} </option>
-            <option value="D"> D. {{choices[3]}} </option>
-            </select>   
-    </div>
+    <div> <p> Answer: <input id = "name" autocomplete = "off" autofocus placeholder = "type your answer" type = "text"> </p> </div>
     <div> <input id = "next" type = "submit"> </div> 
     </form>
     <br>
