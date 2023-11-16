@@ -15,9 +15,18 @@
 
 </body>
 <div>
-  <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
-    <form>
-    <div> <p> Answer: <input id = "name" autocomplete = "off" autofocus placeholder = "type your answer" type = "text"> </p> </div>
+<form>
+    <div> 
+        <input type = "radio" id = "A" name = "choicesMultipleChoice" class = "A">
+            <label for ="A"> A. {{choices[0]}} </label>
+        <input type = "radio" id = "B" name = "choicesMultipleChoice" class = "B">    
+            <label for="B"> B. {{choices[1]}} </label>
+        <input type = "radio" id = "C" name = "choicesMultipleChoice" class = "C">     
+            <label for="C"> C. {{choices[2]}} </label>
+        <input type = "radio" id = "D" name = "choicesMultipleChoice" class = "D">
+            <label for="D"> D. {{choices[3]}} </label>
+            </select>   
+    </div>
     <div> <input id = "next" type = "submit"> </div> 
     </form>
     <br>
