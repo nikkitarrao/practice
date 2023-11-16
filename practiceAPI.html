@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   
    <script id = "view">
-    <div> <h3> Hi there {{firstName}} </h3> </div>
+   // <div> <h3> Hi there {{firstName}} </h3> </div>
   //  Hi there {{firstName}}
   </script> 
   
@@ -14,7 +14,19 @@
   <div id = "display-data" > </div>
 
 </body>
-
+<div>
+   <form id = "form" >
+  <div> <p> Name: <input id = "name" autocomplete = "off" autofocus placeholder = "type your name here" type = "text"> </p> </div>
+  <div> <label for="quiz-selection"> Which quiz would you like to take?:</label>
+  <select name="quiz-selection" id="quiz-selection">
+    <option value="1"> QUIZ 1: {{quizDetails[0].title}}</option>
+    <option value="2"> QUIZ 2: {{quizDetails[1].title}} </option>
+  </select> </div> 
+    <br>
+  <div> <input id = "submit" type = "submit"> </div>  
+  </form>
+  
+</div>
   
  <script>
   
